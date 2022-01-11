@@ -1,0 +1,265 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="777,1391" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="64">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="46">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="544,1326" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="DT_numbers" />
+      <Variable x:TypeArguments="x:String" Default="lotofacil.xlsx" Name="sheetPath" />
+      <Variable x:TypeArguments="x:String" Name="url">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">https://www.loteriasonline.caixa.gov.br/silce-web/#/termos-de-uso</Literal>
+        </Variable.Default>
+      </Variable>
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ReadRange Range="{x:Null}" AddHeaders="False" DataTable="[DT_numbers]" DisplayName="Read excel sheet" sap:VirtualizedContainerService.HintSize="502,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Plan1" WorkbookPath="[sheetPath]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Firefox: Loterias online Caixa" sap:VirtualizedContainerService.HintSize="502,1107" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="IfNotOpen" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="468,890" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Int32" Name="rowCount" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="Navigate to the bettings page" sap:VirtualizedContainerService.HintSize="426,68" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick ClickType="Single" DisplayName="Click 'Sim'" sap:VirtualizedContainerService.HintSize="334,167" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.loteriasonline.caixa.gov.br/silce-web/#/termos-de-uso" DesignTimeRectangle="219, 575, 126, 47" ElementType="Text" FriendlyName="'Sim'" FullSelectorArgument="&lt;webctrl id='botaosim' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='botaosim' tag='A' type='' aaname='Sim' check:text='Sim' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIIAAAAzCAYAAABbldAtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFzSURBVHhe7dzBTQNBDEbhINpBFAJ9hALgCEUgUUiEtjlOC/7FLBbxjLLKaex3+CTimeXipz3u4ea4rAAhQP5CeFrWu+eP9eH1bX1EarZj27Xt/CwEO7h/eV9vj5/bIXKyHduuFcPvbAvBKiGCOmzXtvP2ewvBXhntb9Tgd04IhREChBAghAAhBAghQAgBQggQQoAQAoQQIIQAIQRI6RC+TodNdF5J2hD8kv+L7vhnKyoXQu+On1eUMgS/YL9kFt6XPoToHOdKvBF6QUTnfhaJ7rRnZ1YmhKZ375JnR/z/nVHKEJpoYSY6v3TWm7fZrFKH0PiF+aVdMxvNZ5QyhGgx0dKumY3mM0obgl+Q/91m0b09s9F8RulDiET39s5G8xmlC8EvJ9K7u3c2ms8o5RsB+xEChBAghAAhBAghQAgBQggQQoAQAoQQIIQAIQQIIUDCEPjyai3dL6/yLeY6bMfdbzHzdfY6bMeKIPo6O2ojBPxY1m+a0gyc4K7VBAAAAABJRU5ErkJggg==" InformativeScreenshot="07f990019978f7684110a758b7302f19.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Loterias online Caixa' /&gt;" SearchSteps="FuzzySelector, Image" Text="Sim" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='A' type='' /&gt;" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ClickType="Single" DisplayName="Click 'Aposte Agora!'" sap:VirtualizedContainerService.HintSize="334,167" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.loteriasonline.caixa.gov.br/silce-web/#/home" DesignTimeRectangle="493, 545, 121, 21" ElementType="Text" FriendlyName="'Aposte Agora!'" FullSelectorArgument="&lt;webctrl aaname='Aposte Agora!' href='#/lotofacil' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Aposte Agora!' href='#/lotofacil' tag='A' type='' check:text='Aposte Agora!' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAH0AAAAZCAYAAAAc5SFpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHBSURBVGhD7ZZbTsNAEAS5HNflDNwsaD4aVYbu9SNYJOyW1B9bPXZsj5B4uy2mYy19QtbSJ2QtfULW0idkLX1C1tInJC79/fPjLjPxX949vcPupfcL/5Krn4n3v/J3riY9/1q6gfe/8neuJj2/XTqHmWfhymfivZlXJD3/5tLdWdC7dNyM0kkzzleE6yp76df0M2HnQlyvENdXhOsYkvyPpXNQw/0s6FOE63qE6ypHOuFcgrOa72dBnyJc1yNcVxl1DEl+uHThXHHEO1c47xxJfbom+Y7mOOtcccQ7VzhPR1/8lt/8S3cRzhXd9zNxHR0jtlzKFu6anj7X6V0/E9c5VyRfpC75u6VzaBThXNE9z3Ii+YId+73uCLx+FDdLuudZTjjvXJF8Meocp5ZecfPijOue9Jl+Fs475+DcVvq8oEte0CXfcR3dHl/EpTt6z3OKcB1DXF8RzhX0LiO25nrPc4pwHUOSL9iliOSL76WnAcKZPem4mQpxfYUkX7BjRuyZ44zmuushrq90Rl3B3oUk/+MfuSOkm87MK3yTtfSTuHeno3821tJPwnd3eWbW0h+E3+BVvsVDS1+8Jmvp03G7fQEK8Tasma9ypAAAAABJRU5ErkJggg==" InformativeScreenshot="1ad8188c2d3261bbe294e5fa99680242.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Loterias online Caixa' /&gt;" SearchSteps="FuzzySelector, Image" Text="Aposte Agora!" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='A' type='' /&gt;" />
+                </uix:NClick.Target>
+              </uix:NClick>
+            </Sequence>
+            <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[DT_numbers]" DisplayName="Fill each card and add it to the cart" sap:VirtualizedContainerService.HintSize="354,501" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,352" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="rowItem" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Int32">[rowCount]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ui:InterruptibleDoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="262,52" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+                      <ui:InterruptibleDoWhile.Body>
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="611,608" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <If Condition="[cint(row.item(rowCount).tostring) &lt;= 9]" DisplayName="Build chosen number id " sap:VirtualizedContainerService.HintSize="569,209" sap2010:WorkflowViewState.IdRef="If_1">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <If.Then>
+                              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[rowItem]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">["n0" + row.item(rowCount).ToString]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                            </If.Then>
+                            <If.Else>
+                              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[rowItem]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">["n" + row.item(rowCount).ToString]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                            </If.Else>
+                          </If>
+                          <uix:NClick ClickType="Single" DisplayName="Click in the number" sap:VirtualizedContainerService.HintSize="569,167" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://www.loteriasonline.caixa.gov.br/silce-web/#/lotofacil" DesignTimeRectangle="89, 378, 57, 57" ElementType="Text" FriendlyName="'01'" FullSelectorArgument="[String.Format(&quot;&lt;webctrl id='*{0}' tag='A' /&gt;&quot;, rowItem)]" FuzzySelectorArgument="[&quot;&lt;webctrl id='&quot;+rowItem+&quot;' tag='A' /&gt;&quot;]" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAD0AAAA9CAYAAAAeYmHpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAL7SURBVGhD7ZpLixQxFIX9//9FXLjTzQjtA8XXjI+FzogI6iC4GHVcRr6BFOn0SSc3SXVVEz84NN118zgUdZPc6ltuQP6b7s3v67/u8/dL9/rjhducvnX3nj53dzdP3J0HD93tk83NJ9/5nevEEU+7Oelu+ufVL3d2/unGCMZqRXv6ob/edDPNHTp5eSoNtIp+6b8Xzaa/XP5w95+9kJPtLcZhvFaqTV/9uXaPzt7Jyc0txmX8WqpMX3z9NiWjpcT4zKMGs+lXH87lJJYS87FiMv34zXs58NJiXhaKTbOOqgHXIuZXSpHptd7hWKV3PGt6bc9wTiXP+F7TZEfV8dqVy+pJ06yDSy9LtWLe+9bxpOmlNh69xPxTSNNs9VRHx6bUllWaPtReem7hQ7FjmtOM6uBYpU5nO6bnOh4uJfzEbJnmwK4aHrviQsSWaSoVqtGxC18hW6ZbSzw5VBuUQ7WxCF8hk2mKcapBqUqpaavaWBUWGyfTLVnbQk171caqMItPpim/quCcUuSulfThieNrhD/PZLr2vKywXI+lUHFWheftyXRtElPkrkMYE0qh4qwKk9lkmjcNKjgnRU2Ml0LFWYU/z2S65hiZoiQujvFSqDir8OeZTKvAnFKUxMUxXgoVVyNP051GipoYL4WKs0re6SGf6UNm7/B6LIWKs0pm757rNOSupaRQcVbJdbp2R4asqD68FCrOKrkja62YlKLahlKoOKvk3rv1lIVyqDaxFCrOKnnKgtpkFitGxRxSYRKDLdNDVk6GrJHBcNVQaM3ia1OYtT07pmG4Nxww5LssGO6tJQz5fhqG+yeCZ7j/nHiG+3eRp/a8fSiF5+UcxaZhrXe89A57TKZhbc94yTMcYzYNZMellzPGz2XpFFWmgXVwqQ0M4+5bh3NUm/aw1TvUXp1xUltLC82mPZxm5jqW0q86LdXSzbSHAzuVitbSE+3pJy4A9KC76RCKcdwhyq+soxjhTYNPgnzynd+5ThzxYRFvDmY1vVYGNO3cP21WzJcMrZCrAAAAAElFTkSuQmCC" InformativeScreenshot="69c6363aa4e28d4c22581e95b0961616.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Aposte online na Lotofácil' /&gt;" SearchSteps="FuzzySelector, Image" Text="01" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='A' type='' /&gt;" />
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                          <Assign sap:VirtualizedContainerService.HintSize="569,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Int32">[rowCount]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Int32">[rowCount + 1]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </ui:InterruptibleDoWhile.Body>
+                      <ui:InterruptibleDoWhile.Condition>
+                        <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="rowCount &lt; 15" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
+                      </ui:InterruptibleDoWhile.Condition>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:InterruptibleDoWhile>
+                    <Sequence DisplayName="Add the bet to the cart" sap:VirtualizedContainerService.HintSize="262,68" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NClick ClickType="Single" DisplayName="Click 'Colocar no Carrinho'" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://www.loteriasonline.caixa.gov.br/silce-web/#/lotofacil" DesignTimeRectangle="647, 531, 218, 46" ElementType="Button" FriendlyName="'Colocar no Carrinho'" FullSelectorArgument="&lt;webctrl id='colocarnocarrinho' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='colocarnocarrinho' tag='BUTTON' type='button' aaname=' Colocar no Carrinho' check:text='Colocar no Carrinho' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAN4AAAAyCAYAAAAz4WVOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMbSURBVHhe7dVNahwxEIbhHDBk41wjRwv4AD6MN97HeGcwEypMDUqlSir1X4077wOC6dInTXvCR75cAByO4gEFbsV7f366vD4+XH79/MZisTZe0i3pmLoVTzY+3l6uTwC2JN2Sjqlb8aSVAPbTdoziAQeheEABigcUoHhAAYoHFKB4QAGKBxSgeEABigcUoHhAgd2K9/X7j9sC8Ldd/8ejeIBv1+IJigf865DirVnAGZ2ieEvPRba448za37nit1r6nRXvGrnr4mV4eW82Y83Zs/N+W292j+7pHXcvnmj/YWbWyCiXvcdaeu7sRr/Lvf9u9/R+n7Z4azI6H+1b7RlvX2Vyo0w7jzLKy7YzK5OxMtkoo/PR/pLPwttrZ6qdtRmdWZnMUqcunsee8+7JzLyMyORmMt6e5eWic9mclc1Z9px3j87s3miuMhnR5nSv/dyy8yi31H9VvOiMnY+e1UxOZTIiynl6d7bzbM6TyVjRGTvr5TLzqtwahxRP6Etn10g21+rl2z1798w5j73PYzOZMyrK2nnvvt6esHetYe+K7s7O98hFenszKN5Vu2fvnjmXpd9hl7LPPVHWznv39faEvWuGnrVL2WeVne+Ri/T2ZhxevK1k72szvbzNLT03onfbrJ15mUiUtfPefb09Ye+K2O/zztmZlxHZ+R65SG9vxqmLZzO9vM0tPedp78tkhH3uibJ23ruvtyfsXR6bifJezstm53vkIr29GZ+2eKJ3p7cX5e189KxmcsrbF/asfe6JsnaezUV6OW8vm/XOiuy8KrfGYcUT+uKjNcM7581UlG1lZl5GtHP93Oai52ieEWW9uZ15mR7Ne3e0M9HLeXMrO986J+zMy6xxaPGE/gHRWmL2nlF2NI/21Sjn7UfPGVF2NI/2R+z53h1eLnq2svOtc0rn0f4aJcXzbP2HAffs8OIBoHhACYoHFKB4QAGKBxSgeEABigcUoHhAAYoHFKB4QAGKBxSgeEABigcUcIv3+vhw+Xh7uT4B2JJ0SzqmbsV7f376syGtZLFY2y7plnRM3YoH4DgUDzjc5fIbinnhCaXxlokAAAAASUVORK5CYII=" InformativeScreenshot="396baaf50512ffbe20ce3974ae1374b0.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Aposte online na Lotofácil' /&gt;" SearchSteps="FuzzySelector, Image" Text="Colocar no Carrinho" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='button' /&gt;" />
+                        </uix:NClick.Target>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NClick>
+                      <Delay Duration="[TimeSpan.FromMilliseconds(2000)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                      <uix:NClick ClickType="Single" DisplayName="Click 'Limpar Volante'" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://www.loteriasonline.caixa.gov.br/silce-web/#/lotofacil" DesignTimeRectangle="633, 531, 200, 40" ElementType="Button" FriendlyName="'Limpar Volante'" FullSelectorArgument="&lt;webctrl id='limparvolante' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='limparvolante' tag='BUTTON' type='button' aaname='Limpar Volante' check:text='Limpar Volante' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMwAAAAsCAYAAAApZldwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJtSURBVHhe7d1BihRRDMZxL6erWXoNb+LKOwziQneCy7mA4FI8jKXp4WtTmeT1ywgDr+r/g1CVvHTTzXQIs6pXG4BpDAzQcB2Y33/jw68f25uHL9trgiAus2AzYbMh14Gxg/c/v28fP3/b7j99vdS4cj3z1WbBZsJmQ64DY9NkDQD+sZmw2ZDrwNgK0mQBeGQzYbMhu4EB8FQ5MGwYYI8NAzSxYYBJbBigiQ0DTGLDAE1sGGASGwZoYsOc0N3bd5dAz6E2jH4E2Q9h9R/I6LuZW+dRpxd7h9kwox/N6GwFo88/Oqt0+/HoNBvmCKrvV9VHuv0dz/k8KznFhjmC6vtV9ZFuf8dzPs8qTvs/jM91PwrJzhRR1qMQn8ezTOxRHl/n6z4k5sb3xRCf+/OqproZna3kFBsm1n3vTEh25kOyMx8yOsvEvpgbX4shVV6FZGeK6tzXJZ6vgg3jVD1ZzYt9MZesntVGfL8PyWom1rN75ZLVR32iXDWfZ7GaU28Yr+rJal7si7lk9azvFv8+8fVZzcR6dq9csvqoT5Sr5vMsVsKGcaqebi3mktWzvlv8+8TXztaze+WS1Ud9oly1mK/ukBvGhz+TmJuqp6plIdmZD4n5rOy9xJ/FkCqvQmJuqp6qFmMlh90wPvyZxNxUPVUtRpT1KCTms7L38vx51jeqZSExN1VP1Vedr+IwG+YlrPyHxv871IZ5CQwM2DANDMy5sWGaGBiwYYBJbBigiQ0DTGLDAE1sGGASGwZoYsMAk9gwQFM6MDyyD3iqfGQfD4XlynV/tVkoHwrLY8cJYh82CzYT6WPHAdzGwADTtu0PkCuSGfBs4aYAAAAASUVORK5CYII=" InformativeScreenshot="9720deb719a69d9d0d13f4d8325a4742.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Aposte online na Lotofácil' /&gt;" SearchSteps="FuzzySelector, Image" Text="Limpar Volante" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='button' /&gt;" />
+                        </uix:NClick.Target>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NClick>
+                      <Delay Duration="[TimeSpan.FromMilliseconds(1000)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                    </Sequence>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ForEachRow>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp BrowserType="Firefox" IconBase64="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" InformativeScreenshot="6ddffc15988d4f3bef9caa8d0dcb653d.png" Selector="&lt;html app='firefox.exe' title='Loterias online Caixa'/&gt;" Url="[url]" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
