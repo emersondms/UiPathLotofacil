@@ -6,4 +6,5 @@ UiPath robot that automates bettings on brazilian lottery 'Lotofacil' website
     - The robot will fill each card and let you complete the payment process.
 
 ## TODO
-    - Empty cart.
+    - Empty cart;
+    - Scroll to the card being filled.
